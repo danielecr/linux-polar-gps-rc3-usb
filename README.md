@@ -24,6 +24,6 @@ rc3polar.pcap
 
 # Related
 
-https://github.com/samop/Polar-Flowlink-linux/ here there is a project for understanding the polar format for training
+https://github.com/samop/Polar-Flowlink-linux/ here there is a project for understanding the polar format for workouts
 
 here https://code.google.com/archive/p/polarhrm/ are some other references
