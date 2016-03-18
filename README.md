@@ -21,6 +21,20 @@ So. I upload the .pcap file. device_address is 5
 
 rc3polar.pcap
 
+# Analyze
+
+Device identification is almost standard, what has to be guessed is the protocoll
+
+Device -> Host direction:
+
+tshark -nr rc3polar.pcap -Y "usb.device_address == 5 and usb.endpoint_number.direction == 1" -Tfields -e usb.capdata >out1.hex
+
+sed -e 's/://g' out1.hex >device2host.hex
+
+Host -> Device direction:
+tshark -nr rc3polar.pcap -Y "usb.device_address == 5 and usb.endpoint_number.direction == 0" -Tfields -e usb.capdata >out2.hex
+sed -e 's/://g' out2.hex >host2device.hex
+
 
 # Related
 
