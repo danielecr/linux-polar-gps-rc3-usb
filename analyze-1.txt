@@ -23,7 +23,8 @@ I can guess it is a checksum
 
 0x0454 and 0x0354  as first part occur a number of time
 I guess those are little endian ordered 16bit words, say 0x5404 and 0x5403 message for something as acknowledge:
-driver understood the kind of message by the 0x03 or 0x04
+driver understood the kind of message by the 0x03 or 0x04 (this is wrong, I think, I leave it here
+just in case ... see below)
 
 Every time there is a bulk transfer from device to the host the host reply with 0x54xx schema, or with 0x0701
 (I am reordering as little endian here, actually 0x0107). Say, not reordering (real bytes), host reply are:
